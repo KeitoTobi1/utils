@@ -17,7 +17,8 @@ cat << 'EOS' | sudo tee /etc/fonts/local.conf
 </fontconfig>
 EOS
 
-# GUIライブラリのセットアップ
+# FcitxとMozcのセットアップ
+sudo sh -c "dbus-uuidgen > /var/lib/dbus/machine-id"
 cat << 'EOS' | tee -a ~/.profile
 export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
