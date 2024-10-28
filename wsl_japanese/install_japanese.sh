@@ -42,7 +42,7 @@ EOS
 
 echo "
 Windowsのコマンドラインで「wsl.exe --shutdown」と入力してWSL2を再起動してください。
-再起動後、「fcitx5-config &」を入力して現在の入力メソッドを以下のようにしてください。
+再起動後、「fcitx5-config-qt &」を入力して現在の入力メソッドを以下のようにしてください。
 - キーボード - 日本語
 - Mozc
 
