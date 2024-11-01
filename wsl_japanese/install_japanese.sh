@@ -45,6 +45,16 @@ Windowsのコマンドラインで「wsl.exe --shutdown」と入力してWSL2を
 再起動後、「fcitx-config-gtk3 &」を入力して現在の入力メソッドを以下のようにしてください。
 - キーボード - 日本語
 - Mozc
+表示されない場合は、「.profile」に以下のコードをコピペしてください。
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export INPUT_METHOD=fcitx
+export DefaultIMModule=fcitx
+if ! pgrep -x fcitx >/dev/null; then
+    fcitx > /dev/null 2>&1
+fi
 
 今現在fcitx5-mozcはバグが多いのでfcitxを推奨いたします。
 LinuxのGUIアプリを使う時、日本語の入力切り替えはCtrl+Spaceのほうが安全に切り替えられます。
