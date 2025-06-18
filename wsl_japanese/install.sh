@@ -30,6 +30,7 @@ if ! pgrep -x fcitx >/dev/null; then
 fi
 EOS
 
+mkdir ~/.config
 mkdir ~/.config/environment.d
 touch ~/.config/environment.d/japanese.conf
 cat << 'EOS' | tee -a ~/.config/environment.d/japanese.conf
